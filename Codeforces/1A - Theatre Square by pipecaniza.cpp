@@ -8,7 +8,7 @@
 
  LICENCE: MIT License
  	
- Copyright (C) 2013 Daniel Cañizares Corrales
+ Copyright (C) 2013 Juan Felipe Cañizares Corrales
                     
  Permission is hereby granted, free of charge, to any person obtaining a copy of
  this software and associated documentation files (the "Software"), to deal in 

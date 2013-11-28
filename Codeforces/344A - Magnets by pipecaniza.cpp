@@ -1,19 +1,14 @@
-#include <iostream>
-#include <algorithm>
-#include <iterator>
-#include <sstream>
-#include <fstream>
 /*
  PROBLEM: http://codeforces.com/problemset/problem/344/A
  
  AUTHOR:  Juan Felipe Cañizares Corrales
           Systems Engineer [Student]
-		  Universidad Católica de Oriente
+	  Universidad Católica de Oriente
           pipecaniza@outlook.com
 
  LICENCE: MIT License
  	
- Copyright (C) 2013 Daniel Cañizares Corrales
+ Copyright (C) 2013 Juan Felipe Cañizares Corrales
                     
  Permission is hereby granted, free of charge, to any person obtaining a copy of
  this software and associated documentation files (the "Software"), to deal in 
@@ -33,6 +28,11 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
  IN THE SOFTWARE.
 */
+#include <iostream>
+#include <algorithm>
+#include <iterator>
+#include <sstream>
+#include <fstream>
 #include <cstdlib>
 #include <cstring>
 #include <string>
