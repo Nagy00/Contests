@@ -1,17 +1,16 @@
 /*
- PROBLEM: http://codeforces.com/problemset/problem/368/A
+ PROBLEM: http://codeforces.com/contest/368/problem/B
 
- AUTHORS: Maria Alejandra Ocampo
-          Systems Engineer [Student]
-	  Universidad Católica de Oriente
-		  
-	  Wiliam Valencia
-	  Systems Engineer [Student]
-	  Universidad Católica de Oriente
-		 
+ NOTES:   I used use maps to avoid time limit exceptions.
+ 
+ AUTHOR:  Daniel Cañizares Corrales
+          Systems Engineer [Professor]
+		  Universidad Católica de Oriente
+          dacanizares@outlook.com
+		  		 
  LICENCE: MIT License
  	
- Copyright (C) 2013 Maria Alejandra Ocampo, Wiliam Valencia
+ Copyright (C) 2013 Daniel Cañizares Corrales
                     
  Permission is hereby granted, free of charge, to any person obtaining a copy of
  this software and associated documentation files (the "Software"), to deal in 
@@ -31,42 +30,41 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
  IN THE SOFTWARE.
 */
- #include <iostream>
- #include <vector>
- #include <algorithm>
- using namespace std;
- int main ()
- {
- 	int ganchos,personas,pierde,gana,multa;
- 	vector<int> precio;
- 	while(cin >> ganchos >> multa)
- 	{
- 		precio.clear();
- 		for (int i = 0; i < ganchos; ++i)
- 		{	
-			int a;
- 			cin >> a;
- 			precio.push_back(a);
- 		
- 		}
- 		cin >> personas;
- 		sort(precio.begin(),precio.end());
- 		if (ganchos < personas)
- 		{
- 			pierde = (personas - ganchos) * multa; 		
- 		}
- 		else
- 		{
- 			pierde = 0;
- 		}
- 		gana = 0;
- 		for (int i = 0; i < personas; ++i)
- 		{ 	
-			if (i >= ganchos)
- 				break;
- 			
- 			gana += precio[i];
- 		}
- 		cout<<gana - pierde<<endl;
- 	}
- }
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <map>
+
+using namespace std;
+
+int main()
+{
+	int n, m;
+	while(cin >> n >> m)
+	{
+		int a[n];		
+		for(int i = 0; i < n; ++i)
+		{
+			int value;
+			cin >> value;	
+			a[i] = value;
+		}
+		
+		// Calculate solution
+		int  solution[n];
+		// We use a map to count just distinct numbers
+		map<int,bool> different;
+		for(int i = n - 1; i >= 0; i--)
+		{				
+			different[a[i]] = true;
+			solution[i] = different.size();
+		}
+		
+		for(int i = 0; i < m; ++i)
+		{
+			int value;
+			cin >> value;			
+			cout << solution[value - 1] << endl;
+		}
+	}
+}

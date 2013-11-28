@@ -1,17 +1,17 @@
 /*
- PROBLEM: http://codeforces.com/problemset/problem/368/A
-
- AUTHORS: Maria Alejandra Ocampo
-          Systems Engineer [Student]
-	  Universidad Católica de Oriente
-		  
-	  Wiliam Valencia
-	  Systems Engineer [Student]
-	  Universidad Católica de Oriente
-		 
+ PROBLEM: http://codeforces.com/problemset/problem/363/C
+ 
+ NOTES:   Based on this solution: http://codeforces.com/blog/entry/9537
+ 		  I tried another algorithm but it got time limit error.
+ 
+ AUTHOR:  Daniel Cañizares Corrales
+          Systems Engineer [Professor]
+		  Universidad Católica de Oriente
+          dacanizares@outlook.com
+		  		 
  LICENCE: MIT License
  	
- Copyright (C) 2013 Maria Alejandra Ocampo, Wiliam Valencia
+ Copyright (C) 2013 Daniel Cañizares Corrales
                     
  Permission is hereby granted, free of charge, to any person obtaining a copy of
  this software and associated documentation files (the "Software"), to deal in 
@@ -31,42 +31,28 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
  IN THE SOFTWARE.
 */
- #include <iostream>
- #include <vector>
- #include <algorithm>
- using namespace std;
- int main ()
- {
- 	int ganchos,personas,pierde,gana,multa;
- 	vector<int> precio;
- 	while(cin >> ganchos >> multa)
- 	{
- 		precio.clear();
- 		for (int i = 0; i < ganchos; ++i)
- 		{	
-			int a;
- 			cin >> a;
- 			precio.push_back(a);
- 		
- 		}
- 		cin >> personas;
- 		sort(precio.begin(),precio.end());
- 		if (ganchos < personas)
- 		{
- 			pierde = (personas - ganchos) * multa; 		
- 		}
- 		else
- 		{
- 			pierde = 0;
- 		}
- 		gana = 0;
- 		for (int i = 0; i < personas; ++i)
- 		{ 	
-			if (i >= ganchos)
- 				break;
- 			
- 			gana += precio[i];
- 		}
- 		cout<<gana - pierde<<endl;
- 	}
- }
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	string word;
+	while(cin >> word)
+	{
+		string ans = "";
+		for(int i = 0; i < word.size(); ++i)
+		{
+			char ch = word[i];
+			int p  = ans.size()-1;
+			if(p >= 1 && ch == ans[p] && ch == ans[p-1])
+				continue;
+			if(p >= 2 && ch == ans[p] && ans[p-1] == ans[p-2])
+				continue;
+			ans += ch;			
+		}
+		cout << ans << endl;
+	}
+	return 0;
+}
