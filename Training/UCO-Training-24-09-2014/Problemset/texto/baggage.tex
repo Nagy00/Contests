@@ -1,0 +1,84 @@
+\begin{problema}{Baggage}{Standard}{Standard}{Kattis} 
+
+
+An airline has two flights leaving at about the same time from ICPCity, one to city B and one to city A. The airline also has n  counters where passengers check their baggage. At each counter there is a pair of identical baggage bins, one for city B and one for city A. \\
+
+Just before the flights depart, each pair of baggage bins is moved by a motorized cart to a sorting area. The cart always moves two bins at a time, one for city B and one for city A. After all the bins have been moved, they line up in the sorting area like this: \\
+
+\begin{center}
+B A B A B A ... B A 
+\end{center}
+
+That is, there are $2n$  baggage bins in a row, starting with a bin for city B, then one for city A, and so forth. The task now is to reorder them so all the baggage bins for city A precede the baggage bins for city B. Then the bins can be loaded on the appropriate aircraft. \\
+
+The reordering is done by moving pairs of adjacent baggage bins (not necessarily B then A), again via the motorized cart. For proper balance, the cart must always carry two bins, never just one. A pair of bins must always be moved to an empty space that is at least two bins wide. On the left of the first bin are some empty spaces that can be used as needed during the reordering. \\
+
+When the reordering process begins, the bin locations are numbered from 1  (initially containing the leftmost B baggage bin) to $2n$  (initially containing the rightmost A baggage bin). There are $2n$  initially empty spaces to the left of the bins, numbered from 0  to $-2n+1$ , as shown in Figure 1 for the case $n=4$. \\
+
+\begin{center}
+\begin{tabular}{c c c c c c c c c c c c c c c c } 
+	\hline
+	\multicolumn{1}{|c}{ } &
+	\multicolumn{1}{|c}{ } &
+	\multicolumn{1}{|c}{ } & 
+	\multicolumn{1}{|c}{ } &
+	\multicolumn{1}{|c}{ } &
+	\multicolumn{1}{|c}{ } &
+	\multicolumn{1}{|c}{ } &
+	\multicolumn{1}{|c}{ } &
+	\multicolumn{1}{|c}{B} & 
+	\multicolumn{1}{|c}{A} &
+	\multicolumn{1}{|c}{B} & 
+	\multicolumn{1}{|c}{A} &
+	\multicolumn{1}{|c}{B} &
+	\multicolumn{1}{|c}{A} & 
+	\multicolumn{1}{|c}{B} &
+	\multicolumn{1}{|c|}{A} \\  \hline		
+	\multicolumn{1}{c}{-7} &
+	\multicolumn{1}{c}{-6} &
+	\multicolumn{1}{c}{-5} & 
+	\multicolumn{1}{c}{-4} &
+	\multicolumn{1}{c}{-3} &
+	\multicolumn{1}{c}{-2} &
+	\multicolumn{1}{c}{-1} &
+	\multicolumn{1}{c}{0} &
+	\multicolumn{1}{c}{1} & 
+	\multicolumn{1}{c}{2} &
+	\multicolumn{1}{c}{3} & 
+	\multicolumn{1}{c}{4} &
+	\multicolumn{1}{c}{5} &
+	\multicolumn{1}{c}{6} & 
+	\multicolumn{1}{c}{7} &
+	\multicolumn{1}{c}{8} \\	 
+	
+\end{tabular}
+\label{sec:greetings}
+
+\end{center}
+
+
+\InputFile
+
+The input file contains descriptions of several networks. Every description starts with a line containing a single integer $n$ ($2 \leq n \leq 100$), which is the number of nodes in the network. The nodes are numbered from $1$ to $n$. The next line contains three numbers $s$, $t$, and $c$. The numbers $s$ and $t$ are the source and destination nodes, and the number $c$ is the total number of connections in the network. Following this are $c$ lines describing the connections. Each of these lines contains three integers: the first two are the numbers of the connected nodes, and the third number is the bandwidth of the connection. The bandwidth is a non-negative number not greater than 1000. 
+
+There might be more than one connection between a pair of nodes, but a node cannot be connected to itself. All connections are bi-directional, i.e. data can be transmitted in both directions along a connection, but the sum of the amount of data transmitted in both directions must be less than the bandwidth. 
+
+A line containing the number $0$ follows the last network description, and terminates the input. 
+ \\
+
+
+\OutputFile
+
+For each network description, first print the number of the network. Then print the total bandwidth between the source node $s$ and the destination node $t$, following the format of the sample output. Print a blank line after each test case.  \\
+
+
+\Example
+
+\input ejemplos/bandwidth.txt
+
+
+URL: \\
+http://uva.onlinejudge.org/index.php?
+\\option=com\_onlinejudge\&Itemid=8\&page=show\_problem\&problem=761
+
+\end{problema}
