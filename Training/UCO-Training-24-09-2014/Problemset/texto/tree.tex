@@ -3,10 +3,10 @@
 Your task is to extract 2 alphabets from a binary tree which is composed of unsigned integers respecting the following rules. Let $n$ be the height of a tree. At the level $k$ $(1 \leq k \leq n)$, the tree contains $k$ of nodes and each node has 2 children nodes (except the leaf nodes at the level $n$ which have no children). See the example below to understand the tree formation. Some nodes may have 2 parent nodes. \\
 
 \begin{center}
- \includegraphics{Graficos/tree}
+ \includegraphics{graficos/tree}
 \end{center}
 
-You need to walk in a tree on the path that has a maximum summation (e.g., 1 + 5 + 9 = 15). Numbers in each summation cannot cross into different links (e.g., 5+7 is illegal). Then, your intermediate task is to calculate 2 numbers for alphabet extraction. The first number is calculated from $\sum_{i=1}^{n}{i^2}$ where i is a number along the maximum summation path and n is the height of a tree. The second number is a summation of the maximum path $\sum_{i=1}^{n}{i}$. Regarding to the example above, the first number = 1 + 25 + 81 = 107 and the second number = 1 + 5 + 9 = 15. \\
+You need to walk in a tree on the path that has a maximum summation (e.g., 1 + 5 + 9 = 15). Numbers in each summation cannot cross into different links (e.g., 5+7 is illegal). Then, your intermediate task is to calculate 2 numbers for alphabet extraction. The first number is calculated from $\sum_{i=1}^{n}{i^2}$ where $i$ is a number along the maximum summation path and n is the height of a tree. The second number is a summation of the maximum path $\sum_{i=1}^{n}{i}$. Regarding to the example above, the first number = 1 + 25 + 81 = 107 and the second number = 1 + 5 + 9 = 15. \\
 
 Finally, these two numbers are transformed into two lower case alphabets from ``a'' to ``z'' respectively, where ``a'' is used for 0 and ``z'' is used for 25. Since there are only 26 alphabets, a number greater than 25 will reuse the same set of alphabets. For example, 107 = ``d'' and 15 = ``p'' (that is, the first alphabet ``a'' = 0, or 26, or 52 etc). \\
 
