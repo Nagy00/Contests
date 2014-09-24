@@ -1,0 +1,34 @@
+\begin{problema}{Caesar's Legions}{Standard}{Standard}{CodeForces}
+
+
+Gaius Julius Caesar, a famous general, loved to line up his soldiers. Overall the army had $n_1$ footmen and $n_2$ horsemen. Caesar thought that an arrangement is not beautiful if somewhere in the line there are strictly more that $k_1$ footmen standing successively one after another, or there are strictly more than $k_2$ horsemen standing successively one after another. Find the number of beautiful arrangements of the soldiers. \\
+
+Note that all $n_1 + n_2$ warriors should be present at each arrangement. All footmen are considered indistinguishable among themselves. Similarly, all horsemen are considered indistinguishable among themselves. \\
+
+
+\InputFile
+
+The only line contains four space-separated integers $n_1$, $n_2$, $k_1$, $k_2$ $(1 \leq n_1, n_2 \leq 100, 1 \leq k_1, k_2 \leq 10)$ which represent how many footmen and horsemen there are and the largest acceptable number of footmen and horsemen standing in succession, correspondingly.  \\ 
+
+
+\OutputFile
+
+Print the number of beautiful arrangements of the army modulo 100000000 $(10^8)$. That is, print the number of such ways to line up the soldiers, that no more than $k_1$ footmen stand successively, and no more than $k_2$ horsemen stand successively. \\
+
+
+
+\Example
+
+\input ejemplos/caesar.txt
+
+Note: Let's mark a footman as 1, and a horseman as 2. \\
+
+In the first sample the only beautiful line-up is: 121. \\
+
+In the second sample 5 beautiful line-ups exist: 12122, 12212, 21212, 21221, 22121.\\
+
+URL:\\ 
+http://codeforces.com/problemset/problem/118/D
+
+
+\end{problema}
