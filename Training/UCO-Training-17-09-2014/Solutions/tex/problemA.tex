@@ -1,0 +1,37 @@
+\chapter{Problem A: Hardwood Species}
+
+En este problema hay que determinar, dadas unas especies de árboles, qué porcentaje representan del total. Este tipo de problemas de clasificación y agrupación de datos pueden resultar en \emph{time-outs} para los más novatos en este tipo de competencias sino escogen una estructura correcta para almacenar los datos. De hecho, el competidor tendrá problemas si quiere definir los datos en un simple vector, porque los índices no son enteros ($0,1,\dots,n$), por el contrario, los índices están dados por el nombre de la especie, es decir, que necesitamos una estructura para contar las veces que aparece cada especie, por ejemplo:
+
+\begin{center}
+\begin{tabular}{c c c c c} 
+	\hline	 
+	\multicolumn{1}{|c}{1} &
+	\multicolumn{1}{|c}{3} &
+	\multicolumn{1}{|c}{2} &
+	\multicolumn{1}{|c}{$\cdots$} &
+	\multicolumn{1}{|c|}{$\# apariciones$} \\ \hline		
+	\multicolumn{1}{c}{Ash} &
+	\multicolumn{1}{c}{Gum} & 
+	\multicolumn{1}{c}{Cherry} &
+	\multicolumn{1}{c}{$\cdots$} &
+	\multicolumn{1}{c}{Especie $n$} 	
+\end{tabular}
+\end{center}
+
+Dicho esto, necesitamos una estructura en la que podamos definir el índice como \emph{string}, para lo cuál usaremos un \emph{map\textless string, double \textgreater trees }, el \emph{double} es para que al final realicemos realicemos la división que nos de el porcentaje sin necesidad de hacer un casting. Dicho porcentaje está dado por la siguiente fórmula: 
+
+\begin{equation}
+\% especie = \frac{trees[especie]}{total}
+\end{equation}
+
+En el ejemplo, trees[Ash] valdría 1, trees[Gum] valdría 3, y así sucesivamente. Para hallar el total basta con contar cuántos datos nos ingresan. \\
+
+No sobra resaltar, que por el formato de la entrada se debe utilizar \emph{getline}, de forma que podamos saber cuando termina un caso de prueba, que para este problema está especificado con una línea vacía (que el \emph{cin} ignoraría).
+
+\newpage
+
+\section*{Código fuente}
+\lstinputlisting[language=C++]{./source/Hardwood.cpp}
+
+
+
