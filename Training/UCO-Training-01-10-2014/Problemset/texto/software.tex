@@ -1,0 +1,50 @@
+\begin{problema}{Software Allocation}{Standard}{Standard}{UVa}
+
+A computing center has ten different computers (numbered 0 to 9) on which applications can run. The computers are not multi-tasking, so each machine can run only one application at any time. There are 26 applications, named $A$ to $Z$. Whether an application can run on a particular computer can be found in a job description (see below). 
+
+
+Every morning, the users bring in their applications for that day. It is possible that two users bring in the same application; in that case two different, independent computers will be allocated for that application. 
+
+
+
+A clerk collects the applications, and for each different application he makes a list of computers on which the application could run. Then, he assigns each application to a computer. Remember: the computers are \emph{not} multi-tasking, so each computer must handle at most one application in total. (An application takes a day to complete, so that sequencing i.e. one application after another on the same machine is not possible). 
+
+A job description consists of 
+
+\begin{enumerate}
+\item one upper case letter $A\dots Z$, indicating the application.
+\item one digit $0\dots 9$, indicating the number of users who brought in the application.
+\item a blank (space character.)
+\item one or more different digits $0\dots 9$, indicating the computers on which the application can run.
+\item a terminating semicolon ``;''.
+\item an end-of-line. 
+\end{enumerate}
+
+
+
+\InputFile
+
+The input for your program is a textfile. For each day it contains one or more job descriptions, separated by a line containing only the end-of-line marker. The input file ends with the standard end-of-file marker. For each day your program determines whether an allocation of applications to computers can be done, and if so, generates a possible allocation. 
+
+
+\OutputFile
+
+The output is also a textfile. For each day it consists of one of the following: 
+
+\begin{itemize}
+\item ten characters from the set $A \dots Z , \_ $, indicating the applications allocated to computers 0 to 9 respectively if an allocation was possible. An underscore ``\_'' means that no application is allocated to the corresponding computer.
+
+\item a single character ``!'', if no allocation was possible. 
+\end{itemize}
+
+
+\Example
+
+\input ejemplos/software.txt
+
+
+URL:\\ 
+http://uva.onlinejudge.org/index.php? \\
+option=onlinejudge\&page=show\_problem\&problem=195
+
+\end{problema}
