@@ -1,17 +1,10 @@
 /*
  PROBLEM: http://acm.javeriana.edu.co/maratones/forum/viewtopic.php?f=706&t=844&sid=ca13060eb4f374c0c166801002ae43b8
  
- AUTHORS: Crisman Carmona		  
-          Systems Engineer [Student]
-	  	  Universidad Católica de Oriente
-	  	  
-	  	  William Valencia	  
-          Systems Engineer [Student]
-	  	  Universidad Católica de Oriente
-	  	  
-	  	  Melisa Agudelo		  
-          Systems Engineer [Student]
-	  	  Universidad Católica de Oriente
+ AUTHORS: 
+ 		Melisa Agudelo		  
+          	Systems Engineer [Student]
+	  	 Universidad CatÃ³lica de Oriente
 
  LICENCE: MIT License
  	
