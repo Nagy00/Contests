@@ -1,18 +1,20 @@
 /*
  PROBLEM: http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=247&page=show_problem&problem=3676
  
- AUTHORS: Juan Felipe Ca�izares Corrales
+ AUTHORS: Juan Felipe Cañizares Corrales
           Systems Engineer [Student]
-		  Universidad Cat�lica de Oriente
+	  Universidad Católica de Oriente
           pipecaniza@outlook.com
 
-	  Brian Giraldo Echeverry
-          Systems Engineer [Student]
-          Universidad Cat�lica de Oriente
+	  Daniel Cañizares Corrales 
+          Systems Engineer [Professor]  
+          Universidad Católica de Oriente 
+          dacanizares@outlook.com 
+
 
  LICENCE: MIT License
  	
- Copyright (C) 2013 Daniel Ca�izares Corrales
+ Copyright (C) 2013 Daniel Cañizares Corrales
                     
  Permission is hereby granted, free of charge, to any person obtaining a copy of
  this software and associated documentation files (the "Software"), to deal in 
@@ -32,6 +34,7 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
  IN THE SOFTWARE.
 */
+
 
 #include <iostream>
 #include <algorithm>
