@@ -4,7 +4,7 @@
  AUTHORS: 
  		Melisa Agudelo		  
           	Systems Engineer [Student]
-	  	 Universidad Católica de Oriente
+	  	Universidad Católica de Oriente
 
  LICENCE: MIT License
  	
