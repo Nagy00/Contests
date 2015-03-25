@@ -26,11 +26,15 @@ int main()
                 trees[l]++;
             }
             // Recorremos el mapa
-            for(map<string,double>::iterator it = trees.begin(); it != trees.end();++it){
-                // Imprimimos la especia
+            for(map<string,double>::iterator
+                it = trees.begin();
+                it != trees.end();
+                ++it){
+                // Imprimimos la especie
                 cout<<it->first<<" ";
-                // Imprimimos el % con respecto a la poblacion
-                cout<<fixed<<setprecision(4)<<(it->second/pob*100)<<"\n";
+                // Imprimimos el %
+                cout<<fixed<<setprecision(4)
+                    <<(it->second/pob*100)<<"\n";
             }
             trees.clear();
         }
