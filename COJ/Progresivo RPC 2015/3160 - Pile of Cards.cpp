@@ -14,27 +14,6 @@ string ans = "";
 
 int dp [MAX][MAX];
 
-bool find(int i, int j)
-{
-    if(i == j and i == 0)
-        return true;
-    if(j-1 >= 0 and dp[i][j-1] < 2 and dp[i][j-1] > -2){
-        ans.push_back('1');
-        if(find(i, j-1))
-            return true;
-        else
-            ans.pop_back();
-    }
-    if(i-1 >= 0 and dp[i-1][j] < 2 and dp[i-1][j] > -2){
-        ans.push_back('2');
-        if(find(i-1, j))
-            return true;
-        else
-            ans.pop_back();
-    }
-    return false;
-}
-
 int main()
 {
     ios_base::sync_with_stdio(false);
